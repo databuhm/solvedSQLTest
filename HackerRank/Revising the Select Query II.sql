@@ -15,7 +15,6 @@ CREATE TABLE CITY (
 */
 
 -- Solution
-
 SELECT NAME
 FROM city
 WHERE countrycode = 'USA'
