@@ -5,7 +5,7 @@ The CountryCode for America is USA.
 The CITY table is described as follows:
 */
 
-CREATE TABLE `CITY` (
+CREATE TABLE CITY (
     ID NUMBER,
     NAME VARCHAR2(17),
     COUNTRYCODE VARCHAR2(3),
