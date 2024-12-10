@@ -1,5 +1,5 @@
 /*
-Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION.
+Query the list of CITY names from STATION that do not start with vowels and do not end with vowels.
 Your result cannot contain duplicates.
 
 Input Format
@@ -9,7 +9,7 @@ CREATE TABLE STATION (
     ID NUMBER,
     CITY VARCHAR2(21),
     STATE VARCHAR2(2),
-    LAT_N NUMBER,
+    LAT_N NUMBER
     LONG_W NUMBER
 )
 ;
@@ -20,5 +20,6 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 -- Solution
 SELECT DISTINCT city
 FROM station
-WHERE REGEXP_LIKE(city, '[aeiou]$', 'i')
+WHERE city NOT REGEXP '^[AEIOU]'
+    AND city NOT REGEXP '[aeiou]$'
 ;
