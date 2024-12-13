@@ -12,7 +12,9 @@ Write a query to print the pattern P(20).
 */
 
 -- Solution
-SET @number = 21;
+SET @number = 21
+;
+
 SELECT repeat('* ', @number := @number - 1)
 FROM information_schema.tables
 ;
